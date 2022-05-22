@@ -1,1 +1,0 @@
-check gpg siging key.

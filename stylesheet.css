@@ -1,76 +1,100 @@
 :root {
 	/* color palette */
-	--green: #013A20;
-	--black: #1E1514;
-	--yellow: #ECD5BB;
-	--white: #FFFFFF;
+	--yellow: #FBE7C6;
+	--pink: #FFAEBC;
 }
 
 html {
 	/* size */
-	height: 100%; /* changed from 100vh to 100% */
-	width: 100%; /* check */
-	max-width: 100%; /* check */
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
 	font-size: 100%;
 }
 
 body {
-	/* size and position */
+	/* size and position */	
+	width: 90% !important;
 	min-height: 90vh !important;
-	width: 90% !important; /* important. change from 90vw */
+	padding: 3vh 3vw;
 	margin: auto;
-	padding: 3vh 3vw; /* changed from vh vw */
-
-	/* text and font */
+	/* color */
+	background-color: var(--yellow);
+	/* font */
 	font-family: Arial;
-	font-size: 1rem;
+	font-size: 1rem; 
 	line-height: 2rem;
 	-webkit-text-size-adjust: 100%;
-
-	/* color */
-	background-color: var(--green);
 }
 
-/* this page only has content on this element. */
 article {
-	/* size & position */
-	width: 80% ; /* change from 80vw */
+	/* size and position */
+	width: 80%;
 	max-width: 720px;
-	min-height: 88vh;
-	margin: 3vh auto;
-	padding: 3vw 3vh;
-
-	/* font and text */
-	text-align: justify;
-
+	min-height: 50vh;
+	margin: auto;
+	padding: 3vh 3vw;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	/* color */
-	background-color: var(--white);
-	color: var(--black);
-
+	background-color: var(--pink);
+	color: #1E1514;
+	text-align: justify;
 	/* shadow */
-	box-shadow: 1em 1em 1em var(--black);
+	box-shadow: 1em 1em 1em rgba(0,0,0,0.5);
 }
 
-/* div is just a temporary element. */
-div {
-	/* size & position */
-	padding: 1em;
-	margin-bottom: 1em;
-
-	/* font */
-	text-align: justify;
-
-	/* color */
-	color: var(--yellow);
-	background-color: var(--black);
-}
-
-/* the only image is #amir. */
-img {
-	/* size & position */
+#memoji {
+	/* size and position */
+	width: 9rem;
+	height: 9rem;
 	margin: auto;
 	display: block;
 }
-/*
-colorPalette=[black #1E1514, white: #FFFFFF, champange: #ECD5BB, forestgreen: #013A20]
-*/
+
+article a , p {
+	text-align: center;
+}
+
+a {
+	/* size & position */
+	display: block;
+	margin: auto;
+	overflow: visible;
+	/* text */
+	color: black;
+	text-decoration: none;
+	font-size: 7vmin; /*3vm*/
+	/* animation */
+	animation-name: xenon;
+	animation-duration: 3s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+}
+
+@keyframes xenon {
+	0% {color; black;}
+	50% {color: gray;}
+	100% {color: black;}
+}
+
+#media {
+	/* size & position */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 20vh;
+  	align-items: center;
+}
+
+.media {
+	/* size & position */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 33%;
+	margin: auto;
+	height: 100%;
+}
